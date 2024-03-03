@@ -1,0 +1,16 @@
+.container {
+    margin-left: 70px;
+    margin-top: 68px;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 400px;
+}
+
+.number {
+    color: black;
+    font-weight: 600;
+    font-size: 16px;
+}

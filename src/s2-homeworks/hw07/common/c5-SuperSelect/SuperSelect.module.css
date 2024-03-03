@@ -1,0 +1,15 @@
+.select {
+    width: 165px;
+    height: 24px;
+    padding-left: 5px;
+}
+
+.select:focus {
+
+}
+
+
+.option:hover {
+
+}
+

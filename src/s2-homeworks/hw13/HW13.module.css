@@ -1,0 +1,38 @@
+.buttonsContainer {
+    margin-left: 70px;
+    margin-top: 33px;
+    display: flex;
+    gap: 30px;
+
+}
+
+.responseContainer {
+    display: flex;
+}
+
+.imageContainer {
+
+}
+
+.image {
+    margin-top: 80px;
+    margin-left: 170px;
+}
+
+.textContainer{
+    margin-left: 80px;
+}
+
+.code {
+    margin-top: 150px;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.text {
+    margin-top: 12px;
+}
+
+.info {
+
+}

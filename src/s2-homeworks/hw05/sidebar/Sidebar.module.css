@@ -1,0 +1,57 @@
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: none;
+    width: 317px;
+    background-color: white;
+    z-index: 2;
+}
+
+.sidebar.open {
+    display: block;
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+    gap: 45px;
+}
+
+.nav a {
+    font-weight: 600;
+    font-size: 22px;
+    color: black;
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #58ACFF
+}
+
+.nav a.active {
+    color: #3D6B99
+}
+
+.close {
+    margin-left: 280px;
+    margin-top: 10px;
+    border: none;
+}
+
+.close img {
+
+}
+

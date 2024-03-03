@@ -1,0 +1,33 @@
+.tech {
+    width: 50vw;
+}
+
+.developer {
+}
+
+.techHeader {
+    font-weight: bold;
+    width: 50vw;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.developerHeader {
+    font-weight: bold;
+    background-color: lightgray;
+    display: flex;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+}
+
+.rowHeader {
+    display: flex;
+}
+
+.loading {
+
+}
