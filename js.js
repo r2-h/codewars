@@ -20,7 +20,7 @@ function deepCopy(obj) {
   return result;
 }
 
-
+console.log(9)
 const tree = {
   value: 1,
   children: [
