@@ -9,3 +9,8 @@ function squareUp(n) {
   return res;
       
 }
+
+// Friend or Foe?
+function friend(friends){
+  return friends.filter(n => n.length === 4)
+}
