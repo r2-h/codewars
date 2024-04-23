@@ -1,35 +1,51 @@
-//
+// // custom bind
+// const bind = (fn, context) => {
 
+// }
 
+// const person = {
+//   name: "Ivan",
+// }
 
+// function getName(lastName) {
+//   return this.name + " " + lastName
+// }
 
+// const bindedFn = bind(getName, person)
+
+// console.log(bindedFn("Ivanov")) // Ivan Ivanov
 
 function deepCopy(obj) {
-  if (obj === null || typeof obj !== 'object') {
-    return obj;
+  if (obj === null || typeof obj !== "object") {
+    return obj
   }
 
   if (Array.isArray(obj)) {
-    return obj.map(deepCopy);
+    return obj.map(deepCopy)
   }
 
-  const result = {};
+  const result = {}
   for (let key in obj) {
     if (obj.hasOwnProperty(key)) {
-      result[key] = deepCopy(obj[key]);
+      result[key] = deepCopy(obj[key])
     }
   }
 
-  return result;
+  return result
 }
 
-
 const tree = {
-  value: 1, children: [{
-    value: 2, children: [{value: 3}]
-  }, {
-    value: 4, children: [{value: 5}, {value: 6},]
-  }]
+  value: 1,
+  children: [
+    {
+      value: 2,
+      children: [{ value: 3 }],
+    },
+    {
+      value: 4,
+      children: [{ value: 5 }, { value: 6 }],
+    },
+  ],
 }
 
 // function getTreeValues(tree) {
@@ -51,33 +67,24 @@ const tree = {
 // }
 // console.log(getTreeValues(tree))
 
-
 // TS --------------------------------------------------------------------------------------------------------------
-const X = {a: 1, b: 2, c: 3, d: 4}
+const X = { a: 1, b: 2, c: 3, d: 4 }
 
 function getProperty(obj, key) {
   return obj[key]
 }
 
-getProperty(X, 'a')
-getProperty(X, 'm')
+getProperty(X, "a")
+getProperty(X, "m")
 // function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
 //   return obj[key];
 // }
-
 
 // debounce -------------------------------------------------------
 // const tick = (time) => {
 //   return new Promise(res => setTimeout(res, time))
 // }
 // const debounce = (func, wait) => {
-//   let timeout;
-//   return (...args) => {
-//     clearTimeout(timeout);
-//     timeout = setTimeout(() => {
-//       func.apply(this, args);
-//     }, wait);
-//   };
 // };
 //
 //
@@ -100,7 +107,6 @@ getProperty(X, 'm')
 //
 // testFunction()
 
-
 // Map-------------------------------------------------------------------------------------
 // let map=new Map()
 // map.set([],1)
@@ -113,14 +119,12 @@ getProperty(X, 'm')
 // console.log(map.size)
 // console.log(map.get(f))
 
-
 // const map = new Map()
 // map.set('0', '1')
 // map.set('s2', '2s')
 // map.set('3s', 's3')
 // const arr = [...map.values()]
 // const res = arr.map(val => parseInt(val, 10))
-
 
 // generator --------------------------------------------------------------------
 
