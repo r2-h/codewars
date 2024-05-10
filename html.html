@@ -1,519 +1,454 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Title</title>
-</head>
-<body>
-
-
-<!--<div id="div1" onclick="console.log(1)">-->
-<!--    <div onclick="console.log(2); event.stopPropagation()" id="div2">-->
-<!--        <button onclick="console.log(3);">Click</button>-->
-<!--    </div>-->
-<!--</div>-->
-
-<!--<script>-->
-<!--  function foo4() {-->
-<!--    console.log(4)-->
-<!--  }-->
-
-<!--  function foo5() {-->
-<!--    console.log(5)-->
-<!--  }-->
-
-<!--  div1.addEventListener("click", foo4 )-->
-<!--  div2.addEventListener("click", foo5 )-->
-<!--</script>-->
-
-
-<script>
-
-  // this ------------------------------------------------------------------------------------------------------------
-
-  // function foo() {
-  //   const x = 10;
-  //   return {
-  //     x: 20,
-  //     bar: () => {
-  //       console.log(this.x);
-  //     },
-  //     baz: function () {
-  //       console.log(this.x);
-  //     }
-  //   }
-  // }
-  //
-  // // const obj1 = foo();
-  // // obj1.bar()  //
-  // // obj1.baz() //
-  //
-  // const obj2 = foo.call({x: 30})
-  // let y = obj2.bar
-  // let z = obj2.baz
-  //
-  // y() //
-  // z() //
-  //
-  // // obj2.bar() //
-  // // obj2.baz() //
-
-
-  // class A {
-  //   a = 1
-  //
-  //   x() {
-  //     console.log(this.a)
-  //   }
-  //
-  //   y = () => {
-  //     console.log(this.a)
-  //   }
-  // }
-  //
-  // const a = new A()
-  // a.x() //
-  // a.y() //
-
-
-  // const obj = {
-  //   a: 1,
-  //   x() {
-  //     console.log(this.a)
-  //   },
-  //   y: () => {
-  //     console.log(this.a)
-  //   }
-  // }
-  //
-  // obj.x() //
-  // obj.y() //
-
-
-  // var a = 0
-  // const x = () => console.log(this.a)
-  // x.bind(1).bind(2).bind(3)() //
-  // x() //
-  // function y() {console.log(this.a)}
-  // y.bind(1).bind(2).bind(3)() //
-  // y() //
-
-
-  // var myObject = {
-  //   foo: 'bar',
-  //   func: function() {
-  //     var self = this
-  //     console.log('outer func: this.foo = ' + this.foo)
-  //     console.log('outer func: self.foo = ' + self.foo)
-  //       return (function() {
-  //         console.log('inner func : this.foo = ' + this.foo)
-  //         console.log('inner func : self.foo = ' + self.foo)
-  //       })()
-  //   }
-  // }
-  // myObject.func()
-
-
-  // this.x = 'global'
-  //
-  // const arrow = () => {
-  //   this.x = 1
-  //
-  //   console.log(this.x)
-  // }
-  //
-  // function dec() {
-  //   this.x = 2
-  //   console.log(this.x)
-  // }
-  //
-  // const obj = {
-  //   x: '3',
-  //   objFunc() {
-  //     console.log(this.x)
-  //   }
-  // }
-  // const method = obj.objFunc
-  //
-  // arrow()
-  // dec()
-  // obj.objFunc()
-  // method()
-
-
-  // types ------------------------------------------------------------------------------------------------------------
-
-  // console.log(typeof Object)   //
-  // console.log(typeof Date)   //
-  // console.log(typeof null)   //
-  // console.log(typeof 1n)   //
-  // console.log('new String() -', typeof new String())   //
-  // console.log('String -', typeof String)   //
-  // console.log(typeof new Function())   //
-  // console.log(typeof NaN)   //
-  // console.log('[] -', typeof [])   //
-  // console.log(typeof (typeof {})) //
-  // console.log(typeof {})   //
-
-
-  // promise ----------------------------------------------------------------------------------------------------------
-
-  // setTimeout(()=>{
-  //   console.log(1)
-  // },0)
-  //
-  // let p = new Promise((resolve, reject) => {
-  //   console.log(2)
-  // })
-  // p.then(()=>console.log(3))
-  //
-  // setTimeout(()=>{
-  //   console.log(4)
-  // },1)
-  // console.log(5)
-
-
-  // let p = new Promise((resolve, reject) => {
-  //   console.log(1)
-  //   setTimeout(() => {
-  //     resolve(2);
-  //   }, 1000);
-  // });
-  //
-  // p.then(result => console.log(result))
-  //
-  // setTimeout(() => {
-  //   console.log(3)
-  // }, 1000)
-  //
-  // setTimeout(() => {
-  //   console.log(4)
-  // }, 500)
-
-
-  // Promise
-  //   .reject('a')
-  //   .then(p => p + '1', p => p + '2')
-  //   .catch(p => p + 'b')
-  //   .catch(p => p + 'c')
-  //   .then(p => p + 'd1')
-  //   .then('d2')
-  //   .finally(p => p + 'e')
-  //   .then(p => console.log(p))
-
-
-  // (function () {
-  //   console.log(1)
-  //   setTimeout(() => console.log(2), 1000)
-  //   setTimeout(() => console.log(3), 0)
-  //   Promise.resolve(5).then(console.log)
-  //   new Promise((res) => {
-  //     console.log(6)
-  //     res(7)
-  //   })
-  //     .then(console.log)
-  //   console.log(4)
-  // })()
-
-
-  // const p1 = new Promise((resolve, reject) => {
-  //   throw new Error('Uh-oh!');
-  // });
-  // const p2 = new Promise((resolve, reject) => {
-  //   resolve("p2 ok");
-  // });
-  //
-  // Promise.allSettled([p1, p2]).catch((error) => {
-  //   console.log('My error' + error);
-  // }).then((result) => {
-  //   console.log(result[1].status);
-  // });
-
-
-  // const promise =
-  //
-  // promise.then((res) => {
-  //   console.log('then', res) // them
-  // }).catch((err) => {
-  //   console.log('catch', err)  // catch Ilya
-  // })
-
-
-  // console.log("1")
-  // const promise = new Promise((resolve) => {
-  //   console.log("2")
-  //   setTimeout(() => {
-  //     resolve("3")
-  //   }, 2000)
-  // })
-  // promise
-  //   .then((result) => {
-  //     console.log(result)
-  //     setTimeout(() => {
-  //       console.log("5")
-  //     }, 1000)
-  //     return "4"
-  //   })
-  //   .then((result) => {
-  //     console.log(result)
-  //     return result
-  //   })
-  //   .then((result) => {
-  //     console.log(result)
-  //   })
-  // console.log("6")
-
-
-  // console.log(1)
-  // const foo = () => (new Promise((resolve, reject) => {
-  //   console.log(2);
-  //   resolve(3)
-  // }))
-  // console.log(4)
-  // foo().then(res => console.log(res))
-  // console.log(5)
-
-
-  // Promise
-  //         .resolve()
-  //         .then(() => console.log(1))
-  //         .then(() =>
-  //                 setTimeout(() =>
-  //                         console.log(2), 0)
-  //         )
-  //         .then(() => console.log(3));
-  //
-  // Promise
-  //         .resolve()
-  //         .then(() => console.log(4))
-  //         .then(() =>
-  //                 setTimeout(() =>
-  //                         console.log(5), 0)
-  //         )
-  //         .then(() => console.log(6));
-
-
-  // fetch('https://www.google.com')
-  //         .then(() => console.log(1));
-  //
-  // Promise.resolve()
-  //         .then(() => console.log(2));
-  //
-  // Promise.reject()
-  //         .catch(() => console.log(3));
-
-
-  // const promise = new Promise((resolve, reject) => {
-  //   console.log(1);
-  //
-  //   setTimeout(() => {
-  //     console.log(1);
-  //
-  //     resolve(2);
-  //
-  //     console.log(3);
-  //   }, 0);
-  //
-  //   console.log(4);
-  // });
-  // promise.then((res) => console.log(res));
-  // console.log(5);
-
-
-  // function allSettled(promises) {
-  // }
-  //
-  // const promises = [
-  //   new Promise((resolve) => setTimeout(() => resolve(1), 1000)),
-  //   Promise.reject(2),
-  //   Promise.resolve(3)
-  // ]
-  // allSettled(promises).then(console.log)
-  //
-  //
-  // //   [
-  // //     { "status": "fulfilled", "value": 1 },
-  // //       { "status":"rejected", "reason": 2 },
-  // //       { "status": "fulfilled", "value": 3 }
-  // //   ]
-
-  // var let const-----------------------------------------------------------------------------
-
-  // function changeStuff(a, b) {
-  //   a *= 10
-  //   b.item = 'changed'
-  // }
-  //
-  // let num = 10
-  // let obj1 = {item: 'unchanged'}
-  //
-  // changeStuff(num, obj1)
-  //
-  // console.log(num)
-  // console.log(obj1.item)
-
-
-  // var x = 10
-  //
-  // function bar(funArg) {
-  //   var x = 30
-  //   funArg()
-  // }
-  //
-  // function foo() {
-  //   console.log(x)
-  // }
-  //
-  // foo.x = 20
-  // bar.x = 40
-  //
-  // bar(foo)
-
-
-  // var a = 'hello'
-  // function b() {
-  //   if (false) {
-  //     var a = 'world'
-  //   } else {
-  //     var b = 'man'
-  //   }
-  //   console.log(b)
-  //   console.log(a)
-  // }
-  // b()
-
-
-  // var i = 10
-  // var array = []
-  // while (i--) {
-  //   console.log(i)
-  //   array.push(function() {
-  //     return i + i
-  //   })
-  // }
-  // console.log([array[0](), array[1]()])
-
-
-  // var res = 6
-  // function foo() {
-  //   console.log(res)
-  // }
-  // function someFoo() {
-  //   var res = 8
-  //   foo()
-  //   console.log(res)
-  // }
-  // someFoo()
-
-
-  // class --------------------------------------------------------------------------
-
-  // class Cat {
-  //   name = 'Murka'
-  //
-  //   constructor(name) {
-  //
-  //   }
-  // }
-  //
-  // const yasha = new Cat('Yasha')
-  // console.log(yasha)
-  // console.log(yasha instanceof Cat)
-
-
-  // class Logger {
-  //   log(text) {
-  //     console.log(text)
-  //   }
-  // }
-  // class Printer extends Logger {
-  //   constructor(name) {
-  //     super()
-  //     this.name = name
-  //   }
-  //   log(text) {
-  //     super.log(`${this.name}: ${text}`)
-  //   }
-  // }
-  //
-  // const printer = new Printer('Only')
-  //
-  // printer.log('Hello!')
-
-
-
-  // class Circle {
-  //   constructor(radius) {
-  //     this._radius = radius;
-  //   }
-  //
-  //   get radius() {
-  //     return this._radius;
-  //   }
-  //
-  //   set radius(value) {
-  //     if (value <= 0) throw new Error("Radius must be positive");
-  //     this._radius = value;
-  //   }
-  //
-  //   get diameter() {
-  //     return this._radius * 2;
-  //   }
-  //   dia () {
-  //     return this._radius * 2 + 1;
-  //   }
-  //
-  //   set diameter(value) {
-  //     if (value <= 0) throw new Error("Diameter must be positive");
-  //     this._radius = value / 2;
-  //   }
-  // }
-  //
-  // const myCircle = new Circle(5);
-  // console.log(myCircle.radius);
-  // myCircle.diameter = 10;
-  // console.log(myCircle.diameter);
-  // console.log(myCircle.dia());
-
-
-
-  // class Set {
-  //   constructor(arr) {
-  //   }
-  //
-  //   add(item) {
-  //   }
-  //
-  //   has(item) {
-  //   }
-  //
-  //   delete(item) {
-  //   }
-  // }
-  //
-  // const set = new Set([1, 1, 2, 3, 2])
-  // console.log(set)
-  // console.log(set.has(1))  // true
-  // console.log(set.has(6))// false
-  //
-  // console.log(set.add(6))
-  // console.log(set.has(6)) //true
-  //
-  // console.log(set.delete(6))
-  // console.log(set.has(6)) //false
-
-</script>
-</body>
+  </head>
+  <body>
+    <!--<div id="div1" onclick="console.log(1)">-->
+    <!--    <div onclick="console.log(2); event.stopPropagation()" id="div2">-->
+    <!--        <button onclick="console.log(3);">Click</button>-->
+    <!--    </div>-->
+    <!--</div>-->
+
+    <!--<script>-->
+    <!--  function foo4() {-->
+    <!--    console.log(4)-->
+    <!--  }-->
+
+    <!--  function foo5() {-->
+    <!--    console.log(5)-->
+    <!--  }-->
+
+    <!--  div1.addEventListener("click", foo4 )-->
+    <!--  div2.addEventListener("click", foo5 )-->
+    <!--</script>-->
+
+    <script>
+      // this ------------------------------------------------------------------------------------------------------------
+
+      // function foo() {
+      //   const x = 10;
+      //   return {
+      //     x: 20,
+      //     bar: () => {
+      //       console.log(this.x);
+      //     },
+      //     baz: function () {
+      //       console.log(this.x);
+      //     }
+      //   }
+      // }
+      //
+      // // const obj1 = foo();
+      // // obj1.bar()  //
+      // // obj1.baz() //
+      //
+      // const obj2 = foo.call({x: 30})
+      // let y = obj2.bar
+      // let z = obj2.baz
+      //
+      // y() //
+      // z() //
+      //
+      // // obj2.bar() //
+      // // obj2.baz() //
+
+      // class A {
+      //   a = 1
+      //
+      //   x() {
+      //     console.log(this.a)
+      //   }
+      //
+      //   y = () => {
+      //     console.log(this.a)
+      //   }
+      // }
+      //
+      // const a = new A()
+      // a.x() //
+      // a.y() //
+
+      // const obj = {
+      //   a: 1,
+      //   x() {
+      //     console.log(this.a)
+      //   },
+      //   y: () => {
+      //     console.log(this.a)
+      //   }
+      // }
+      //
+      // obj.x() //
+      // obj.y() //
+
+      // var a = 0
+      // const x = () => console.log(this.a)
+      // x.bind(1).bind(2).bind(3)() //
+      // x() //
+      // function y() {console.log(this.a)}
+      // y.bind(1).bind(2).bind(3)() //
+      // y() //
+
+      // var myObject = {
+      //   foo: 'bar',
+      //   func: function() {
+      //     var self = this
+      //     console.log('outer func: this.foo = ' + this.foo)
+      //     console.log('outer func: self.foo = ' + self.foo)
+      //       return (function() {
+      //         console.log('inner func : this.foo = ' + this.foo)
+      //         console.log('inner func : self.foo = ' + self.foo)
+      //       })()
+      //   }
+      // }
+      // myObject.func()
+
+      // this.x = 'global'
+      //
+      // const arrow = () => {
+      //   this.x = 1
+      //
+      //   console.log(this.x)
+      // }
+      //
+      // function dec() {
+      //   this.x = 2
+      //   console.log(this.x)
+      // }
+      //
+      // const obj = {
+      //   x: '3',
+      //   objFunc() {
+      //     console.log(this.x)
+      //   }
+      // }
+      // const method = obj.objFunc
+      //
+      // arrow()
+      // dec()
+      // obj.objFunc()
+      // method()
+
+      // types ------------------------------------------------------------------------------------------------------------
+
+      // console.log(typeof Object)   //
+      // console.log(typeof Date)   //
+      // console.log(typeof null)   //
+      // console.log(typeof 1n)   //
+      // console.log('new String() -', typeof new String())   //
+      // console.log('String -', typeof String)   //
+      // console.log(typeof new Function())   //
+      // console.log(typeof NaN)   //
+      // console.log('[] -', typeof [])   //
+      // console.log(typeof (typeof {})) //
+      // console.log(typeof {})   //
+
+      // promise ----------------------------------------------------------------------------------------------------------
+
+      // setTimeout(()=>{
+      //   console.log(1)
+      // },0)
+      //
+      // let p = new Promise((resolve, reject) => {
+      //   console.log(2)
+      // })
+      // p.then(()=>console.log(3))
+      //
+      // setTimeout(()=>{
+      //   console.log(4)
+      // },1)
+      // console.log(5)
+
+      // let p = new Promise((resolve, reject) => {
+      //   console.log(1)
+      //   setTimeout(() => {
+      //     resolve(2);
+      //   }, 1000);
+      // });
+      //
+      // p.then(result => console.log(result))
+      //
+      // setTimeout(() => {
+      //   console.log(3)
+      // }, 1000)
+      //
+      // setTimeout(() => {
+      //   console.log(4)
+      // }, 500)
+
+      // Promise
+      //   .reject('a')
+      //   .then(p => p + '1', p => p + '2')
+      //   .catch(p => p + 'b')
+      //   .catch(p => p + 'c')
+      //   .then(p => p + 'd1')
+      //   .then('d2')
+      //   .finally(p => p + 'e')
+      //   .then(p => console.log(p))
+
+      // (function () {
+      //   console.log(1)
+      //   setTimeout(() => console.log(2), 1000)
+      //   setTimeout(() => console.log(3), 0)
+      //   Promise.resolve(5).then(console.log)
+      //   new Promise((res) => {
+      //     console.log(6)
+      //     res(7)
+      //   })
+      //     .then(console.log)
+      //   console.log(4)
+      // })()
+
+      // const p1 = new Promise((resolve, reject) => {
+      //   throw new Error('Uh-oh!');
+      // });
+      // const p2 = new Promise((resolve, reject) => {
+      //   resolve("p2 ok");
+      // });
+      //
+      // Promise.allSettled([p1, p2]).catch((error) => {
+      //   console.log('My error' + error);
+      // }).then((result) => {
+      //   console.log(result[1].status);
+      // });
+
+      // const promise =
+      //
+      // promise.then((res) => {
+      //   console.log('then', res) // them
+      // }).catch((err) => {
+      //   console.log('catch', err)  // catch Ilya
+      // })
+
+      // console.log("1")
+      // const promise = new Promise((resolve) => {
+      //   console.log("2")
+      //   setTimeout(() => {
+      //     resolve("3")
+      //   }, 2000)
+      // })
+      // promise
+      //   .then((result) => {
+      //     console.log(result)
+      //     setTimeout(() => {
+      //       console.log("5")
+      //     }, 1000)
+      //     return "4"
+      //   })
+      //   .then((result) => {
+      //     console.log(result)
+      //     return result
+      //   })
+      //   .then((result) => {
+      //     console.log(result)
+      //   })
+      // console.log("6")
+
+      // console.log(1)
+      // const foo = () => (new Promise((resolve, reject) => {
+      //   console.log(2);
+      //   resolve(3)
+      // }))
+      // console.log(4)
+      // foo().then(res => console.log(res))
+      // console.log(5)
+
+      // Promise.resolve()
+      //   .then(() => console.log(1))
+      //   .then(() => console.log(7))
+      //   .then(() => setTimeout(() => console.log(2), 0))
+      //   .then(() => console.log(3))
+      // Promise.resolve()
+      //   .then(() => console.log(4))
+      //   .then(() => setTimeout(() => console.log(5), 0))
+      //   .then(() => console.log(6))
+
+      // fetch("https://www.google.com").then(() => console.log(1))
+      // Promise.resolve().then(() => console.log(2))
+      // Promise.reject().catch(() => console.log(3))
+
+      // const promise = new Promise((resolve, reject) => {
+      //   console.log(1)
+      //   setTimeout(() => {
+      //     console.log(1)
+      //     resolve(2)
+      //     console.log(3)
+      //   }, 0)
+      //   console.log(4)
+      // })
+      // promise.then((res) => console.log(res))
+      // console.log(5)
+
+
+      // function allSettled(promises) {}
+      // const promises = [
+      //   new Promise((resolve) => setTimeout(() => resolve(1), 1000)),
+      //   Promise.reject(2),
+      //   Promise.resolve(3),
+      // ]
+      // allSettled(promises)
+      // //   [
+      // //     { "status": "fulfilled", "value": 1 },
+      // //       { "status":"rejected", "reason": 2 },
+      // //       { "status": "fulfilled", "value": 3 }
+      // //   ]
+
+      // var let const-----------------------------------------------------------------------------
+
+      // function changeStuff(a, b) {
+      //   a *= 10
+      //   b.item = 'changed'
+      // }
+      //
+      // let num = 10
+      // let obj1 = {item: 'unchanged'}
+      //
+      // changeStuff(num, obj1)
+      //
+      // console.log(num)
+      // console.log(obj1.item)
+
+      // var x = 10
+      //
+      // function bar(funArg) {
+      //   var x = 30
+      //   funArg()
+      // }
+      //
+      // function foo() {
+      //   console.log(x)
+      // }
+      //
+      // foo.x = 20
+      // bar.x = 40
+      //
+      // bar(foo)
+
+      // var a = 'hello'
+      // function b() {
+      //   if (false) {
+      //     var a = 'world'
+      //   } else {
+      //     var b = 'man'
+      //   }
+      //   console.log(b)
+      //   console.log(a)
+      // }
+      // b()
+
+      // var i = 10
+      // var array = []
+      // while (i--) {
+      //   console.log(i)
+      //   array.push(function() {
+      //     return i + i
+      //   })
+      // }
+      // console.log([array[0](), array[1]()])
+
+      // var res = 6
+      // function foo() {
+      //   console.log(res)
+      // }
+      // function someFoo() {
+      //   var res = 8
+      //   foo()
+      //   console.log(res)
+      // }
+      // someFoo()
+
+      // class --------------------------------------------------------------------------
+
+      // class Cat {
+      //   name = 'Murka'
+      //
+      //   constructor(name) {
+      //
+      //   }
+      // }
+      //
+      // const yasha = new Cat('Yasha')
+      // console.log(yasha)
+      // console.log(yasha instanceof Cat)
+
+      // class Logger {
+      //   log(text) {
+      //     console.log(text)
+      //   }
+      // }
+      // class Printer extends Logger {
+      //   constructor(name) {
+      //     super()
+      //     this.name = name
+      //   }
+      //   log(text) {
+      //     super.log(`${this.name}: ${text}`)
+      //   }
+      // }
+      //
+      // const printer = new Printer('Only')
+      //
+      // printer.log('Hello!')
+
+      // class Circle {
+      //   constructor(radius) {
+      //     this._radius = radius;
+      //   }
+      //
+      //   get radius() {
+      //     return this._radius;
+      //   }
+      //
+      //   set radius(value) {
+      //     if (value <= 0) throw new Error("Radius must be positive");
+      //     this._radius = value;
+      //   }
+      //
+      //   get diameter() {
+      //     return this._radius * 2;
+      //   }
+      //   dia () {
+      //     return this._radius * 2 + 1;
+      //   }
+      //
+      //   set diameter(value) {
+      //     if (value <= 0) throw new Error("Diameter must be positive");
+      //     this._radius = value / 2;
+      //   }
+      // }
+      //
+      // const myCircle = new Circle(5);
+      // console.log(myCircle.radius);
+      // myCircle.diameter = 10;
+      // console.log(myCircle.diameter);
+      // console.log(myCircle.dia());
+
+      // class Set {
+      //   constructor(arr) {
+      //   }
+      //
+      //   add(item) {
+      //   }
+      //
+      //   has(item) {
+      //   }
+      //
+      //   delete(item) {
+      //   }
+      // }
+      //
+      // const set = new Set([1, 1, 2, 3, 2])
+      // console.log(set)
+      // console.log(set.has(1))  // true
+      // console.log(set.has(6))// false
+      //
+      // console.log(set.add(6))
+      // console.log(set.has(6)) //true
+      //
+      // console.log(set.delete(6))
+      // console.log(set.has(6)) //false
+    </script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
