@@ -8,6 +8,7 @@ import HW5 from "../s2-homeworks/hw05/HW5"
 import HW6 from "../s2-homeworks/hw06/HW6"
 import { FC } from "react"
 import { Recursion } from "./test/rekursion"
+import { Render1 } from "./test/render1"
 
 // function App() {
 //   return (
@@ -17,6 +18,8 @@ import { Recursion } from "./test/rekursion"
 //   )
 // }
 
+function App() {
+  return <Render1 />
+}
+
 export default App
-
-

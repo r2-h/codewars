@@ -1,4 +1,6 @@
-// custom bind
+
+
+// custom bind ---------------------------------------------------------------------------------
 
 // const bind = () => {}
 // const person = {
@@ -9,7 +11,6 @@
 // }
 // const bindedFn = bind(getName, person)
 // console.log(bindedFn("Ivanov")) // Ivan Ivanov
-
 
 // deepCopy ---------------------------------------------------------------------------------------
 
@@ -40,7 +41,6 @@
 //   ],
 // }
 
-
 // function getTreeValues(tree) {
 //   const stack = [tree]
 //   const res = []
@@ -60,7 +60,6 @@
 //
 // console.log(getTreeValues(tree))
 
-
 // TS ----------------------------------------------------------------------------------
 
 // const X = {a: 1, b: 2, c: 3, d: 4}
@@ -74,7 +73,6 @@
 /*function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
   return obj[key];
 }*/
-
 
 // debounce ----------------------------------------------------------------------------
 
@@ -100,7 +98,6 @@
 //
 // testFunction()
 
-
 // Map-------------------------------------------------------------------------------------
 
 // let map= new Map()
@@ -114,16 +111,12 @@
 // console.log(map.size) //
 // console.log(map.get(f)) //
 
-
-
 // const map = new Map()
 // map.set('0', '1')
 // map.set('1', '2s')
 // map.set('2', '3s')
 // const arr = [...map.values()]
 // const res = arr.map(val => parseInt(val, 10)) //
-
-
 
 // generator --------------------------------------------------------------------
 
@@ -135,3 +128,21 @@
 //
 // console.log(gen.next()) //
 // console.log(gen.next()) //
+
+
+//prototipe -------------------------------------------------------------------------
+
+
+/* // write methods 
+Number.prototype.plus = function (value) {
+  return this + value
+}
+Number.prototype.minus = function (value) {
+  return this - value
+} */
+
+// console.log((2).plus(3).minus(1)) // 4
+
+
+
+
