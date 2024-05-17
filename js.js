@@ -72,8 +72,16 @@
   return obj[key];
 }*/
 
-// debounce ----------------------------------------------------------------------------
+// currying -----------------------------------------------------------------------------
+// const add = (x) => (y) => x + y
+// const mul = (x) => (y) => x * y
 
+// const pipe =
+// const pipedFoo = pipe(add(2), mul(2), add(3))
+
+// console.log(pipedFoo(4)) // (4 + 2) * 2 + 3 = 15
+
+// debounce ----------------------------------------------------------------------------
 // const tick = (time) => {
 //   return new Promise(res => setTimeout(res, time))
 // }
@@ -127,9 +135,7 @@
 // console.log(gen.next()) //
 // console.log(gen.next()) //
 
-
 //prototipe -------------------------------------------------------------------------
-
 
 /* // write methods 
 Number.prototype.plus = function (value) {
@@ -140,7 +146,3 @@ Number.prototype.minus = function (value) {
 } */
 
 // console.log((2).plus(3).minus(1)) // 4
-
-
-
-
