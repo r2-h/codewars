@@ -18,8 +18,10 @@ import { Render1 } from "./test/render1"
 //   )
 // }
 
+
+
 function App() {
-  return <Render1 />
+  return <div>TEST</div>
 }
 
 export default App
