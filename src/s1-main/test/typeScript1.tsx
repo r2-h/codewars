@@ -52,6 +52,7 @@ const AnyComponent3 = () => {
 const AnyComponent4 = () => {
   return <ContainerFc height={5} Component={OtherFC} name="Макс" />
 }
+
 // ответ
 // type IProps<T> = {
 //     Component: FC<T>
@@ -59,9 +60,7 @@ const AnyComponent4 = () => {
 //   } & T
 //const ContainerFc: FC<IProps<OtherProps>> = (props) => {
 
-
-
-
+/* ------------------------------------------------------------------------------------------------------- */
 
 const obj = {
   name: "Nik",
@@ -81,3 +80,4 @@ const var2: MYType = "age"
 const var3: MYType = "test"
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const var4: MYType = 25
+/* ------------------------------------------------------------------------------------------------------ */
