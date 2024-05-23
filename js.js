@@ -1,4 +1,3 @@
-
 // custom bind ---------------------------------------------------------------------------------
 
 // const bind = () => {}
@@ -64,21 +63,7 @@
 // }
 // console.log(sum(array)) // 8
 
-// TS ----------------------------------------------------------------------------------
-
-// const X = {a: 1, b: 2, c: 3, d: 4}
-//
-// function getProperty(obj, key) {
-//   return obj[key]
-// }
-// getProperty(X, "a")
-// getProperty(X, "m")
-
-/*function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
-  return obj[key];
-}*/
-
-// currying -----------------------------------------------------------------------------
+// currying -------------------------------------------------------------------------------
 // const add = (x) => (y) => x + y
 // const mul = (x) => (y) => x * y
 
@@ -130,7 +115,7 @@
 // const arr = [...map.values()]
 // const res = arr.map(val => parseInt(val, 10)) //
 
-// generator --------------------------------------------------------------------
+// generator -----------------------------------------------------------------------
 
 // function* genereteNumber () {
 //   yield 2
@@ -152,3 +137,22 @@ Number.prototype.minus = function (value) {
 } */
 
 // console.log((2).plus(3).minus(1)) // 4
+
+// кастомный promiseAll --------------------------------------------------------------------------------------------
+
+// const promiseAll = (promises) => {
+
+// }
+
+// const pr1 = new Promise((resolve, reject) => setTimeout(() => resolve("Промис 1"), 1000))
+// const pr2 = new Promise((resolve, reject) => setTimeout(() => resolve("Промис 2"), 2000))
+// const pr3 = new Promise((resolve, reject) => setTimeout(() => resolve("Промис 3"), 3000))
+
+// promiseAll([pr1, pr2, pr3])
+//   .then((results) => {
+//     console.log(results) // ["Промис 1", "Промис 2", "Промис 3"]
+//   })
+//   .catch((error) => {
+//     console.error("Ошибка:", error)
+//   })
+

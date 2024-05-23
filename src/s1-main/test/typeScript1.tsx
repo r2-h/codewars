@@ -62,22 +62,35 @@ const AnyComponent4 = () => {
 
 /* ------------------------------------------------------------------------------------------------------- */
 
-const obj = {
-  name: "Nik",
-  age: 25,
-}
+// const obj = {
+//   name: "Nik",
+//   age: 25,
+// }
 
-type MYType = any // Вместо any нужный тип
+// type MYType = any // Вместо any нужный тип
 
-/** Тут не должно быть ошибок типов */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const var1: MYType = "name"
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const var2: MYType = "age"
+// /** Тут не должно быть ошибок типов */
+// // eslint-disable-next-line @typescript-eslint/no-unused-vars
+// const var1: MYType = "name"
+// // eslint-disable-next-line @typescript-eslint/no-unused-vars
+// const var2: MYType = "age"
 
-/** Тут должны быть ошибки типов */
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const var3: MYType = "test"
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const var4: MYType = 25
+// /** Тут должны быть ошибки типов */
+// // eslint-disable-next-line @typescript-eslint/no-unused-vars
+// const var3: MYType = "test"
+// // eslint-disable-next-line @typescript-eslint/no-unused-vars
+// const var4: MYType = 25
 /* ------------------------------------------------------------------------------------------------------ */
+
+
+// // написать типизацию которая проверит на наличие ключа у объекта
+// const X = {a: 1, b: 2, c: 3, d: 4}
+// function getProperty(obj, key) {
+//   return obj[key]
+// }
+// getProperty(X, "a") // нет ошибки
+// getProperty(X, "m") // ошибка
+
+/* function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
+  return obj[key];
+} */
