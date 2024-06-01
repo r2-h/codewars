@@ -115,7 +115,7 @@
 // const arr = [...map.values()]
 // const res = arr.map(val => parseInt(val, 10)) //
 
-// generator -----------------------------------------------------------------------
+// generator ------------------------------------------------------------------------------------
 
 // function* genereteNumber () {
 //   yield 2
@@ -126,9 +126,9 @@
 // console.log(gen.next()) //
 // console.log(gen.next()) //
 
-//prototype -------------------------------------------------------------------------
+//prototype ---------------------------------------------------------------------------------------------------
 
-/* // write methods 
+/* // write methods
 Number.prototype.plus = function (value) {
   return this + value
 }
@@ -155,4 +155,3 @@ Number.prototype.minus = function (value) {
 //   .catch((error) => {
 //     console.error("Ошибка:", error)
 //   })
-
