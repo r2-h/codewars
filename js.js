@@ -109,11 +109,12 @@
 // console.log(map.get(f)) //
 
 // const map = new Map()
-// map.set('0', '1')
-// map.set('1', '2s')
-// map.set('2', '3s')
+// map.set("0", "1")
+// map.set("1", "2s")
+// map.set("2", "3s")
 // const arr = [...map.values()]
-// const res = arr.map(val => parseInt(val, 10)) //
+// const res = arr.map((val) => parseInt(val, 10)) 
+// console.log(res) //
 
 // generator ------------------------------------------------------------------------------------
 
