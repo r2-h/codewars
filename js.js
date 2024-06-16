@@ -10,23 +10,9 @@
 // const bindedFn = bind(getName, person)
 // console.log(bindedFn("Ivanov")) // Ivan Ivanov
 
-// deepCopy ---------------------------------------------------------------------------------------
+// recursion ---------------------------------------------------------------------------------------
 
-// function deepCopy(obj) {
-//   if (obj === null || typeof obj !== "object") {
-//     return obj
-//   }
-//
-//   if (Array.isArray(obj)) {
-//     return obj.map(deepCopy)
-//   }
-//
-//   const result = {}
-//   for (let key of Object.keys(obj)) {
-//     result[key] = deepCopy(obj[key])
-//   }
-//
-//   return result
+// function deepCopy() {
 // }
 
 // const tree = {
@@ -63,14 +49,55 @@
 // }
 // console.log(sum(array)) // 8
 
+// Нужно написать функцию isEqual, которая сравнивает значения объектов
+// const redCar = {
+//   wheels: 4,
+//   brake: { ki: 3 },
+//   options: [
+//     { optionkey: "123-234-345", optionName: "color" },
+//     { optionKey: "234-345-987", optionName: "warranty" },
+//   ],
+// }
+// const yellowCar = {
+//   wheels: 4,
+//   brake: { zi: 3 },
+//   options: [
+//     { optionkey: "123-234-345", optionName: "color" },
+//     { optionKey: "234-345-987", optionName: "warranty" },
+//   ],
+// }
+// const blueCar = {
+//   wheels: 4,
+//   brake: 4,
+//   options: [{ optionKey: "234-345-987", optionName: "warranty" }],
+// }
+// const greenCar = {
+//   options: [
+//     { optionkey: "123-234-345", optionName: "color" },
+//     { optionKey: "234-345-987", optionName: "warranty" },
+//   ],
+//   brake: { ki: 3 },
+//   wheels: 4,
+// }
+// function isEqual() {
+// }
+// console.log(isEqual(redCar, yellowCar)) // false
+// console.log(isEqual(redCar, blueCar)) // false
+// console.log(isEqual(redCar, greenCar)) // true
+
 // currying -------------------------------------------------------------------------------
 // const add = (x) => (y) => x + y
 // const mul = (x) => (y) => x * y
-
 // const pipe =
 // const pipedFoo = pipe(add(2), mul(2), add(3))
-
 // console.log(pipedFoo(4)) // (4 + 2) * 2 + 3 = 15
+
+// Написать функцию add, которая принимает число и может вызываться бесконечное число раз,
+// пока не будет вызвана без аргументов - тогда возвращается сумма переданных  ранее чисел:
+// const add = (num) => {}
+// console.log(add(9)(10)()) // 19
+// console.log(add(9)()) // 9
+// console.log(add()) // 0
 
 // debounce ----------------------------------------------------------------------------
 // const tick = (time) => {
@@ -113,7 +140,7 @@
 // map.set("1", "2s")
 // map.set("2", "3s")
 // const arr = [...map.values()]
-// const res = arr.map((val) => parseInt(val, 10)) 
+// const res = arr.map((val) => parseInt(val, 10))
 // console.log(res) //
 
 // generator ------------------------------------------------------------------------------------
@@ -156,3 +183,69 @@ Number.prototype.minus = function (value) {
 //   .catch((error) => {
 //     console.error("Ошибка:", error)
 //   })
+
+// palindrome ------------------------------------------------------------------------------------------------------
+// const palindrome = () => {}
+// console.log(palindrome("abba")) // true
+// console.log(palindrome("abc")) // false
+
+//answers /////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// recursion ---------------------------------------------------------------------------------------------------
+// function deepCopy(obj) {
+//   if (obj === null || typeof obj !== "object") {
+//     return obj
+//   }
+//   if (Array.isArray(obj)) {
+//     return obj.map(deepCopy)
+//   }
+//   const result = {}
+//   for (let key of Object.keys(obj)) {
+//     result[key] = deepCopy(obj[key])
+//   }
+//   return result
+// }
+
+// Нужно написать функцию isEqual, которая сравнивает значения объектов
+// function isEqual(obj1, obj2) {
+//   const keys1 = Object.keys(obj1)
+//   const keys2 = Object.keys(obj2)
+//   if (keys1.length !== keys2.length) return false
+//   for (let key of keys1) {
+//     const val1 = obj1[key]
+//     const val2 = obj2[key]
+//     if (typeof val1 === "object" && val1 !== null && typeof val2 === "object" && val2 !== null) {
+//       if (!isEqual(val1, val2)) return false
+//     } else if (val1 !== val2) {
+//       return false
+//     }
+//   }
+//   return true
+
+// currying ----------------------------------------------------------------------------------------------------
+// const add = (num) => {
+//   if (!num) return 0
+//   let sum = num || 0
+//   return (param) => {
+//     if (!param) {
+//       return sum
+//     } else {
+//       sum += param
+//       return add(sum)
+//     }
+//   }
+// }
+
+// palindrome ------------------------------------------------------------------------------------------------------
+// const palindrome = (str) => {
+//   let left = 0
+//   let right = str.length - 1
+//   while (left < right) {
+//     if (str[left] !== str[right]) {
+//       return false
+//     }
+//     left += 1
+//     right -= 1
+//   }
+//   return true
+// }
