@@ -57,7 +57,7 @@ export const Recursion = () => {
         {data.map((node) => (
           <li>
             {node.name}
-            {node?.children ? render(node.children) : null}
+            {node.children && render(node.children) }
           </li>
         ))}
       </ul>

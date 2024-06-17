@@ -93,22 +93,3 @@ const AnyComponent4 = () => {
 /* function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
   return obj[key];
 } */
-
-/* ------------------------------------------------------------------------------------------------------ */
-
-// type First = {
-//   jump: Function //+
-//   wild: boolean
-//   woolen: boolean // +
-//   color: string
-// }
-
-// type Bird = {
-//   run: Function // +
-//   sing: Function // +
-//   canSwim: boolean // +
-//   size: number
-//   featherSize: number // +
-// }
-
-// type Mutant = 
