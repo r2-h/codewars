@@ -11,19 +11,21 @@
 // console.log(bindedFn("Ivanov")) // Ivan Ivanov
 
 // recursion ---------------------------------------------------------------------------------------
-
-// function deepCopy() {
-// }
+// const array = [1, 2, [3, 4], [[5, "w"], "d"], null]
+// function arrayClone() {}
+// console.log(arrayClone(array))
 
 // const tree = {
 //   value: 1,
 //   children: [
 //     {
 //       value: 4,
-//       children: [{value: 5}, {value: 6}],
+//       children: [{ value: 5 }, { value: 6 }],
 //     },
 //   ],
 // }
+// function deepCopy() {}
+// console.log(deepCopy(tree))
 
 // function getTreeValues(tree) {
 //   const stack = [tree]
@@ -189,7 +191,7 @@ Number.prototype.minus = function (value) {
 // console.log(palindrome("abba")) // true
 // console.log(palindrome("abc")) // false
 
-//answers /////////////////////////////////////////////////////////////////////////////////////////////////////
+//answers ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // recursion ---------------------------------------------------------------------------------------------------
 // function deepCopy(obj) {
@@ -204,6 +206,17 @@ Number.prototype.minus = function (value) {
 //     result[key] = deepCopy(obj[key])
 //   }
 //   return result
+// }
+
+// function deepClone(array) {
+//   return array.reduce((acc, item) => {
+//     if (typeof item !== "object" || item === null) {
+//       acc.push(item)
+//     } else {
+//       acc.push(deepClone(item))
+//     }
+//     return acc
+//   }, [])
 // }
 
 // Нужно написать функцию isEqual, которая сравнивает значения объектов
