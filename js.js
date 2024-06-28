@@ -28,22 +28,7 @@
 // console.log(deepCopy(tree))
 
 // function getTreeValues(tree) {
-//   const stack = [tree]
-//   const res = []
-//
-//   while (stack.length > 0) {
-//     const node = stack.pop()
-//     if (node.value !== undefined) {
-//       res.push(node.value)
-//     }
-//     if (node.children?.length) {
-//       stack.push(...node.children)
-//     }
-//   }
-//
-//   return res
 // }
-//
 // console.log(getTreeValues(tree))
 
 // const array = [1, 1, [1, [1, 2], 1], [1]]
@@ -218,6 +203,24 @@ Number.prototype.minus = function (value) {
 //     return acc
 //   }, [])
 // }
+
+// function getTreeValues(tree) {
+//   const stack = [tree]
+//   const res = []
+//
+//   while (stack.length > 0) {
+//     const node = stack.pop()
+//     if (node.value !== undefined) {
+//       res.push(node.value)
+//     }
+//     if (node.children?.length) {
+//       stack.push(...node.children)
+//     }
+//   }
+//
+//   return res
+// }
+
 
 // Нужно написать функцию isEqual, которая сравнивает значения объектов
 // function isEqual(obj1, obj2) {
