@@ -221,7 +221,6 @@ Number.prototype.minus = function (value) {
 //   return res
 // }
 
-
 // Нужно написать функцию isEqual, которая сравнивает значения объектов
 // function isEqual(obj1, obj2) {
 //   const keys1 = Object.keys(obj1)
