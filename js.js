@@ -294,7 +294,3 @@ Number.prototype.minus = function (value) {
 //     })
 //   })
 // }
-// const p1 = Promise.resolve(42)
-// const p2 = 42
-// const p3 = new Promise((resolve, reject) => setTimeout(() => reject(42)), 100)
-// promiseAllSettled([p1, p2, p3]).then(console.log)
