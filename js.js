@@ -109,6 +109,34 @@
 //
 // testFunction()
 
+//throttle --------------------------------------------------------------------------------------
+function throttle(func, wait) {
+  let shouldBeCalled = true
+
+  return function (...params) {
+    if (!shouldBeCalled) {
+      return
+    }
+    shouldBeCalled = false
+
+    setTimeout(() => {
+      shouldBeCalled = true
+    }, wait)
+    func.apply(this, params)
+  }
+}
+
+function sayHello() {
+  console.log("Привет! Это сообщение будет выводиться не чаще одного раза в секунду.")
+}
+
+const throttledSayHello = throttle(sayHello, 1000)
+
+throttledSayHello()
+setTimeout(throttledSayHello, 500) // Попытка вызвать через 500 мс после первого вызова
+setTimeout(throttledSayHello, 1500) // Попытка вызвать через 1500 мс после первого вызова
+
+
 // Map-------------------------------------------------------------------------------------
 
 // let map= new Map()
