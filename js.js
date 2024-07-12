@@ -174,9 +174,8 @@ Number.prototype.minus = function (value) {
 // кастомный promiseAllSettled --------------------------------------------------------------------------------------------
 // const promiseAllSettled = (promises) => {}
 // const p1 = Promise.resolve(42)
-// const p2 = 42
 // const p3 = new Promise((resolve, reject) => setTimeout(() => reject(42)), 100)
-// promiseAllSettled([p1, p2, p3]).then(console.log)
+// promiseAllSettled([p1, p3]).then(console.log)
 
 // palindrome ------------------------------------------------------------------------------------------------------
 // const palindrome = () => {}
@@ -276,21 +275,27 @@ Number.prototype.minus = function (value) {
 // const promiseAllSettled = (promises) => {
 //   return new Promise((resolve) => {
 //     const results = []
-//     let pending = promises.length
-//     if (pending === 0) {
+//     let finished = 0
+//     if (promises.length === 0) {
 //       return resolve(results)
 //     }
-//     promises.forEach(async (item, index) => {
-//       try {
-//         const value = await item
-//         results[index] = { status: "fulfilled", value }
-//       } catch (err) {
-//         results[index] = { status: "rejected", reason: err }
-//       }
-//       pending -= 1
-//       if (pending === 0) {
-//         resolve(results)
-//       }
+//     promises.forEach((promise, i) => {
+//       promise
+//         .then((res) => {
+//           results[i] = { status: "fulfilled", value: res }
+//         })
+//         .catch((e) => {
+//           results[i] = { status: "rejected", reason: e }
+//         })
+//         .finally(() => {
+//           finished += 1
+//           if (finished === promises.length) {
+//             resolve(results)
+//           }
+//         })
 //     })
 //   })
 // }
+// const p1 = Promise.resolve(42)
+// const p3 = new Promise((resolve, reject) => setTimeout(() => reject(42)), 100)
+// promiseAllSettled([p1, p3]).then(console.log)
