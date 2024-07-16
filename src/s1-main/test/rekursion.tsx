@@ -51,23 +51,5 @@ const data: Data[] = [
 ]
 
 export const Recursion = () => {
-  const render = (data: Data[]) => {
-    return (
-      <ul>
-        {data.map((node) => (
-          <li>
-            {node.name}
-            {node.children && render(node.children) }
-          </li>
-        ))}
-      </ul>
-    )
-  }
-
-  return (
-    <div>
-      <h1>App</h1>
-      {render(data)}
-    </div>
-  )
+  return <div></div>
 }
