@@ -195,8 +195,16 @@ Number.prototype.minus = function (value) {
 // console.log(palindrome("abba")) // true
 // console.log(palindrome("abc")) // false
 
+// custom memo -------------------------------------------------------------------------------------------------------
+// const pow = (a, b) => a * b
+// const memo = () => {}
+// const memoized = memo(pow)
+// console.log(memoized(4, 2)) // 8
+
+
 ///////// answers ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////// answers ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 
 // recursion ---------------------------------------------------------------------------------------------------
 // function deepCopy(obj) {
@@ -337,5 +345,18 @@ Number.prototype.minus = function (value) {
 //       shouldBeCalled = true
 //     }, wait)
 //     func.apply(this, params)
+//   }
+// }
+
+// custom memo -----------------------------------------------------------------------------------------------------------
+// const memo = (fn) => {
+//   const cache = new Map()
+//   return (...arg) => {
+//     if (cache.has(arg)) {
+//       return cache.get(arg)
+//     }
+//     const result = fn(...arg)
+//     cache.set(arg, result)
+//     return result
 //   }
 // }
