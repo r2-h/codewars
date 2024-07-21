@@ -196,6 +196,7 @@ Number.prototype.minus = function (value) {
 // console.log(palindrome("abc")) // false
 
 ///////// answers ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////// answers ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // recursion ---------------------------------------------------------------------------------------------------
 // function deepCopy(obj) {
@@ -312,6 +313,19 @@ Number.prototype.minus = function (value) {
 // const p1 = Promise.resolve(42)
 // const p3 = new Promise((resolve, reject) => setTimeout(() => reject(42)), 100)
 // promiseAllSettled([p1, p3]).then(console.log)
+
+// throttle ------------------------------------------------------------------------------------------------------------
+// function throttle(func, wait) {
+//   let shouldBeCalled = true
+//   return (...params) => {
+//     if (!shouldBeCalled) return
+//     shouldBeCalled = false
+//     setTimeout(() => {
+//       shouldBeCalled = true
+//     }, wait)
+//     func.apply(this, params)
+//   }
+// }
 
 // throttle ------------------------------------------------------------------------------------------------------------
 // function throttle(func, wait) {
