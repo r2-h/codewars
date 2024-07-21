@@ -110,32 +110,17 @@
 // testFunction()
 
 //throttle --------------------------------------------------------------------------------------
-function throttle(func, wait) {
-  let shouldBeCalled = true
+function throttle() {}
 
-  return function (...params) {
-    if (!shouldBeCalled) {
-      return
-    }
-    shouldBeCalled = false
-
-    setTimeout(() => {
-      shouldBeCalled = true
-    }, wait)
-    func.apply(this, params)
-  }
-}
-
-function sayHello() {
-  console.log("Привет! Это сообщение будет выводиться не чаще одного раза в секунду.")
+function sayHello(text) {
+  console.log(`Привет! Это сообщение будет выводиться не чаще одного раза в секунду. ${text ? text : ""}`)
 }
 
 const throttledSayHello = throttle(sayHello, 1000)
 
-throttledSayHello()
-setTimeout(throttledSayHello, 500) // Попытка вызвать через 500 мс после первого вызова
-setTimeout(throttledSayHello, 1500) // Попытка вызвать через 1500 мс после первого вызова
-
+throttledSayHello("A !")
+setTimeout(throttledSayHello("B !"), 500) // Попытка вызвать через 500 мс после первого вызова
+setTimeout(throttledSayHello("C !"), 1500) // Попытка вызвать через 1500 мс после первого вызова
 
 // Map-------------------------------------------------------------------------------------
 
@@ -210,7 +195,7 @@ Number.prototype.minus = function (value) {
 // console.log(palindrome("abba")) // true
 // console.log(palindrome("abc")) // false
 
-//answers ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////// answers ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // recursion ---------------------------------------------------------------------------------------------------
 // function deepCopy(obj) {
@@ -327,3 +312,16 @@ Number.prototype.minus = function (value) {
 // const p1 = Promise.resolve(42)
 // const p3 = new Promise((resolve, reject) => setTimeout(() => reject(42)), 100)
 // promiseAllSettled([p1, p3]).then(console.log)
+
+// throttle ------------------------------------------------------------------------------------------------------------
+// function throttle(func, wait) {
+//   let shouldBeCalled = true
+//   return (...params) => {
+//     if (!shouldBeCalled) return
+//     shouldBeCalled = false
+//     setTimeout(() => {
+//       shouldBeCalled = true
+//     }, wait)
+//     func.apply(this, params)
+//   }
+// }
