@@ -1,5 +1,3 @@
-
-
 // custom bind ---------------------------------------------------------------------------------
 
 // const bind = () => {}
@@ -206,8 +204,27 @@
 // const memoized = memo(pow)
 // console.log(memoized(4, 2)) // 8
 
+// --------------------------------------------------------------------------------------------------------
 
-
+// class EventEmitter {}
+// const emitter = new EventEmitter()
+// const sub1 = emitter.subscribe("event1", callback1)
+// const sub2 = emitter.subscribe("event2", callback2)
+// const sub3 = emitter.subscribe("event1", callback1)
+// emitter.emit("event1", 3, 2)
+// emitter.emit("event2", 3, 4)
+// // В консоль выведется
+// // 3
+// // 3
+// // 12
+// sub1.release()
+// sub3.release()
+// function callback1(x, y) {
+//   console.log(x + y, "event1")
+// }
+// function callback2(x, y) {
+//   console.log(x * y, "event2")
+// }
 
 ///////// answers ////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////// answers ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -352,4 +369,28 @@
 //     cache.set(arg, result)
 //     return result
 //   }
+// }
+
+// -------------------------------------------------------------------------------------------------------------------
+// class EventEmitter {
+//     constructor() {
+//         this.events = {};
+//     }
+//     subscribe(event, callback) {
+//         if (!this.events[event]) {
+//             this.events[event] = [];
+//         }
+//         const callbackWrapper = { callback, event };
+//         this.events[event].push(callbackWrapper);
+//         return {
+//             release: () => {
+//                 this.events[event] = this.events[event].filter(cb => cb !== callbackWrapper);
+//             }
+//         };
+//     }
+//     emit(event, ...args) {
+//         if (this.events[event]) {
+//             this.events[event].forEach(cbWrapper => cbWrapper.callback(...args));
+//         }
+//     }
 // }
