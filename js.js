@@ -328,19 +328,6 @@
 //   }
 // }
 
-// throttle ------------------------------------------------------------------------------------------------------------
-// function throttle(func, wait) {
-//   let shouldBeCalled = true
-//   return (...params) => {
-//     if (!shouldBeCalled) return
-//     shouldBeCalled = false
-//     setTimeout(() => {
-//       shouldBeCalled = true
-//     }, wait)
-//     func.apply(this, params)
-//   }
-// }
-
 // custom memo -----------------------------------------------------------------------------------------------------------
 // const memo = (fn) => {
 //   const cache = new Map()
