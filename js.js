@@ -162,17 +162,16 @@
 
 // кастомный promiseAll --------------------------------------------------------------------------------------------
 
-// const promiseAll = (promises) => {
-
+// const promiseAll = () => {
 // }
 
 // const pr1 = new Promise((resolve, reject) => setTimeout(() => resolve("Промис 1"), 1000))
 // const pr2 = new Promise((resolve, reject) => setTimeout(() => resolve("Промис 2"), 2000))
 // const pr3 = new Promise((resolve, reject) => setTimeout(() => resolve("Промис 3"), 3000))
 
-// promiseAll([pr1, pr2, pr3])
+// promiseAll([pr1, pr3, pr2])
 //   .then((results) => {
-//     console.log(results) // ["Промис 1", "Промис 2", "Промис 3"]
+//     console.log(results) // ["Промис 1", "Промис 3", "Промис 2"]
 //   })
 //   .catch((error) => {
 //     console.error("Ошибка:", error)
