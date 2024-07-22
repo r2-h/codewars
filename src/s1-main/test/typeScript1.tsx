@@ -37,20 +37,46 @@ const ContainerFc: any = (props: any) => {
 
 /** Тут не должно быть ошибок типов */
 const AnyComponent1 = () => {
-  return <ContainerFc height={5} Component={OtherFC} name="Макс" age={30} />
+  return (
+    <ContainerFc
+      height={5}
+      Component={OtherFC}
+      name="Макс"
+      age={30}
+    />
+  )
 }
 
 /** Тут должны быть ошибки типов */
 const AnyComponent2 = () => {
-  return <ContainerFc height={5} Component={OtherFC} name={30} age="Макс" />
+  return (
+    <ContainerFc
+      height={5}
+      Component={OtherFC}
+      name={30}
+      age="Макс"
+    />
+  )
 }
 
 const AnyComponent3 = () => {
-  return <ContainerFc height={5} Component={OtherFC} role="Макс" />
+  return (
+    <ContainerFc
+      height={5}
+      Component={OtherFC}
+      role="Макс"
+    />
+  )
 }
 
 const AnyComponent4 = () => {
-  return <ContainerFc height={5} Component={OtherFC} name="Макс" />
+  return (
+    <ContainerFc
+      height={5}
+      Component={OtherFC}
+      name="Макс"
+    />
+  )
 }
 
 // ответ
@@ -93,3 +119,33 @@ const AnyComponent4 = () => {
 /* function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
   return obj[key];
 } */
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+
+// interface Todo {
+//   title: string
+//   description: string
+//   completed: boolean
+// }
+
+// type TodoPreview = MyPick<Todo, "title" | "completed">
+
+// const todo: TodoPreview = {
+//   title: "sdfsdf",
+//   completed: false,
+// }
+
+// type MyPick // дописать
+
+
+
+
+/* ------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------------------------ */
+
+
+// type MyPick<T, Keys extends keyof T> = {
+//   [Key in Keys]: T[Key]
+// }
