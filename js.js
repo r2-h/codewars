@@ -294,23 +294,25 @@
 
 // TYPES __________________________________________________________________________________________________________
 
-// console.log(typeof Object)   //
-// console.log(typeof Date)   //
-// console.log(typeof null)   //
-// console.log(typeof 1n)   //
-// console.log('new String() -', typeof new String())   //
+// console.log(typeof Object) // 
+// console.log(typeof Date) // 
+// console.log(typeof null) // 
+// console.log(typeof 1n) // 
+// console.log(typeof new String()) //
 // console.log(0 || false) //
-// console.log('String -', typeof String)   //
-// console.log(typeof new Function())   //
-// console.log(typeof NaN)   //
-// console.log(false || 0 && 5) //
+// console.log("-------------------------")
+// console.log(typeof String) //
+// console.log(typeof new Function()) //
+// console.log(typeof NaN) //
+// console.log(false || (0 && 5)) //
 // console.log(true && false) //
-// console.log('[] -', typeof [])   //
-// console.log(typeof (typeof {})) //
-// console.log(typeof Array)   //
-// console.log(typeof {})   //
-// console.log(undefined == null)  //
-// console.log(NaN == NaN)  //
+// console.log(typeof []) //
+// console.log("-------------------------")
+// console.log(typeof typeof {}) //
+// console.log(typeof Array) //
+// console.log(typeof {}) //
+// console.log(undefined == null) //
+// console.log(NaN == NaN) //
 // console.log(NaN === NaN) //
 
 // THIS ___________________________________________________________________________________________________________________________
