@@ -262,10 +262,6 @@
 // console.log(myCircle.dia()) //
 
 // class Set {
-//   constructor(arr) {}
-//   add(item) {}
-//   has(item) {}
-//   delete(item) {}
 // }
 // const set = new Set([1, 1, 2, 3, 2])
 // console.log(set)
