@@ -433,11 +433,11 @@
 //   .then(() => setTimeout(() => console.log(5), 0))
 //   .then(() => console.log(6))
 
-// fetch("https://www.google.com").then(() => console.log(1))
-// Promise.resolve().then(() => console.log(2))
-// Promise.reject().catch(() => console.log(3))
+// fetch("https://www.google.com").then(() => console.log(8))
+// Promise.resolve().then(() => console.log(6))
+// Promise.reject().catch(() => console.log(9))
 // const promise = new Promise((resolve, reject) => {
-//   console.log(1)
+//   console.log(7)
 //   setTimeout(() => {
 //     console.log(1)
 //     resolve(2)
