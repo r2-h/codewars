@@ -436,7 +436,6 @@
 // fetch("https://www.google.com").then(() => console.log(1))
 // Promise.resolve().then(() => console.log(2))
 // Promise.reject().catch(() => console.log(3))
-
 // const promise = new Promise((resolve, reject) => {
 //   console.log(1)
 //   setTimeout(() => {
