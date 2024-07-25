@@ -423,7 +423,6 @@
 // console.log(4)
 // foo().then(res => console.log(res))
 // console.log(5)
-
 // Promise.resolve()
 //   .then(() => console.log(1))
 //   .then(() => console.log(7))
