@@ -1,4 +1,5 @@
-import React from 'react'
+import React from "react"
+import { Buttons } from "./test/buttons"
 
 // function App() {
 //   return (
@@ -8,15 +9,12 @@ import React from 'react'
 //   )
 // }
 
-
 function App() {
-
   return (
     <div>
-      sdadasdfds
+      <Buttons />
     </div>
-  );
+  )
 }
-
 
 export default App
