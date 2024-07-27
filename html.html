@@ -9,18 +9,16 @@
     />
   </head>
   <body>
-    <!-- <div class="container">
-      <div class="red" style="background-color: red"></div>
-      <div class="blue" style="background-color: blue"></div>
-      <div class="gray" style="background-color: gray"></div>
-    </div>
-    <p>Color:</p>
-    <script>
-      // написать квадрат с тремя квадратами внутри, при клике на квадрат показывать его цвет
-    </script> -->
+    <!-- написать квадрат с тремя квадратами внутри, при клике на квадрат показывать его цвет -->
 
-    <!-- <div id="div1" onclick="console.log(1)">
-      <div onclick="console.log(2); event.stopPropagation()" id="div2">
+    <!-- <div
+      id="div1"
+      onclick="console.log(1)"
+    >
+      <div
+        onclick="console.log(2); event.stopPropagation()"
+        id="div2"
+      >
         <button onclick="console.log(3);">Click</button>
       </div>
     </div>
@@ -154,41 +152,3 @@
     // obj.prop.arrowInsideFunction()() //
   </script>
 </html>
-
-<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////
-
-
-const redDiv = document.querySelector(".red")
-const colorParagraph = document.querySelector("p")
-redDiv.addEventListener("click", (e) => {
-const color = e.target.classList[0]
-colorParagraph.textContent = `Color: ${color}`
-  
-  .container {
-  width: 300px;
-  height: 200px;
-  border: 1px solid black;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-}
-
-.red {
-  grid-column: 1 / 2;
-  grid-row: 1 / 2;
-}
-.blue {
-  grid-column: 1 / 2;
-  grid-row: 2 / 3;
-}
-.gray {
-    grid-column: 2 / 3;
-    grid-row: 1 / 3
-}
--------------------------------------------------------------------------------------------------------
- 
-
-
-
-
-}) -->
