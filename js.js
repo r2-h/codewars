@@ -7,7 +7,6 @@
 // function getName(lastName) {
 //   return this.name + " " + lastName
 // }
-// const bindedFn = bind(getName, person)
 // console.log(bindedFn("Ivanov")) // Ivan Ivanov
 
 // recursion ---------------------------------------------------------------------------------------
