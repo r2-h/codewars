@@ -1,4 +1,4 @@
-// custom reduce 
+// custom reduce
 // const array = [1, 2, 3]
 // console.log()
 
@@ -10,6 +10,7 @@
 // function getName(lastName) {
 //   return this.name + " " + lastName
 // }
+// const bindedFn = bind(getName, person) // так и без bindedFn
 // console.log(bindedFn("Ivanov")) // Ivan Ivanov
 
 // recursion ---------------------------------------------------------------------------------------
