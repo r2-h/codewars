@@ -1,3 +1,30 @@
+class EventEmitter {}
+
+const button = new EventEmitter()
+
+// Subscribe listeners to the 'click' event
+const removeHandleClick1 = button.addEventListener("click", () => console.log("called on click 1"))
+const removeHandleClick2 = button.addEventListener("click", () => console.log("called on click 2"))
+
+// Subscribe a listener to the 'hover' event
+const removeHandleHover = button.addEventListener("hover", (payload) =>
+  console.log("called on hover", payload)
+)
+
+// Notify all listeners of the 'click' event and the 'hover' event with a payload
+button.dispatchEvent("click") // Output: called on click 1, called on click 2
+button.dispatchEvent("hover", 1) // Output: called on hover 1
+
+// Remove the subscribed listeners
+removeHandleClick1()
+removeHandleClick2()
+removeHandleHover()
+
+// Attempt to notify listeners after removal - no handlers should be called
+button.dispatchEvent("click") // No handlers were called
+button.dispatchEvent("hover") // No handlers were called
+// ------------------------------------------------------------------------------------------------------
+
 // function _sum(a, b) {
 //   return a + b
 // }
