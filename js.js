@@ -333,7 +333,6 @@
 //   console.log(4)
 // },1)
 // console.log(5)
-
 // let p = new Promise((resolve, reject) => {
 //   console.log(1)
 //   setTimeout(() => {
