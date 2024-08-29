@@ -323,30 +323,24 @@
 // setTimeout(() => {
 //   console.log(1)
 // }, 0)
-
 // let p = new Promise((resolve, reject) => {
 //   console.log(2)
 // })
 // p.then(() => console.log(3))
-
 // setTimeout(() => {
 //   console.log(4)
 // }, 1)
 // console.log(5)
-
 // let p2 = new Promise((resolve, reject) => {
 //   console.log(1)
 //   setTimeout(() => {
 //     resolve(2)
 //   }, 1000)
 // })
-
 // p2.then((result) => console.log(result))
-
 // setTimeout(() => {
 //   console.log(3)
 // }, 1000)
-
 // setTimeout(() => {
 //   console.log(4)
 // }, 500)
