@@ -1,3 +1,15 @@
+// function _sum(a, b) {
+//   return a + b
+// }
+// function spy(f) {}
+// const sum = spy(_sum)
+// console.log(sum(2, 2)) // 4
+// console.log(sum(21, 21)) // 42
+// console.log(sum.data.calls) // 2
+// console.log(sum.data.args) // [[2, 2], [21, 21]]
+// console.log(sum.data.results) // [4, 42]
+// ---------------------------------------------------------------------------------------------------
+
 // console.log(five(plus(one())))
 // console.log(seven(minus(two())))
 // ---------------------------------------------------------------------------------------------------
