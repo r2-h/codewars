@@ -332,17 +332,17 @@
 // }, 1)
 // console.log(5)
 // let p2 = new Promise((resolve, reject) => {
-//   console.log(1)
+//   console.log(6)
 //   setTimeout(() => {
-//     resolve(2)
+//     resolve(7)
 //   }, 1000)
 // })
 // p2.then((result) => console.log(result))
 // setTimeout(() => {
-//   console.log(3)
+//   console.log(8)
 // }, 1000)
 // setTimeout(() => {
-//   console.log(4)
+//   console.log(9)
 // }, 500)
 
 // Promise
