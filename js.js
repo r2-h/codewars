@@ -1,4 +1,7 @@
-//
+// console.log(five(plus(one())))
+// console.log(seven(minus(two())))
+// ---------------------------------------------------------------------------------------------------
+
 // custom reduce
 // const array = [1, 2, 3]
 // console.log()
