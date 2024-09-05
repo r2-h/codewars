@@ -1,3 +1,4 @@
+
 // custom Array.flat()
 // const flat = (arr, n) => {}
 // console.log(flat([1, 2, [3, 4, [5, 6]]], 2))
