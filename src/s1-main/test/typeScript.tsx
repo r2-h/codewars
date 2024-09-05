@@ -22,8 +22,6 @@ export const TypeScript = () => {
    * ! Типизировать tree и sumTree
    ***/
   // type Tree = {
-  //   v: number
-  //   c?: Tree[]
   // }
   // const tree = [
   //   {
