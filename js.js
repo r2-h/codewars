@@ -332,26 +332,6 @@ JavaScript. Напиши функцию-конструктор, которая �
 // set.delete(6)
 // console.log(set.has(6)) //false
 
-// class EventEmitter {}
-// const emitter = new EventEmitter()
-// const sub1 = emitter.subscribe("event1", callback1)
-// const sub2 = emitter.subscribe("event2", callback2)
-// const sub3 = emitter.subscribe("event1", callback1)
-// emitter.emit("event1", 3, 2)
-// emitter.emit("event2", 3, 4)
-// // В консоль выведется
-// // 3
-// // 3
-// // 12
-// sub1.release()
-// sub3.release()
-// function callback1(x, y) {
-//   console.log(x + y, "event1")
-// }
-// function callback2(x, y) {
-//   console.log(x * y, "event2")
-// }
-
 // TYPES __________________________________________________________________________________________________________
 
 // console.log(typeof Object) //
