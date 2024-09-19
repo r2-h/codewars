@@ -1,8 +1,26 @@
-// custom flat
-// const array = [1, 2, [3, 4], [[5, "w"], "d"], null]
-// console.log(array.flat(1))
-// console.log(array)
-// console.log(array.customFlat(1))
+// // получить самый быстрый промис м среднее время выполнения промисов
+
+// const doSomething = (ms) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (Math.random() < 0.5) {
+//         reject("error")
+//       } else {
+//         resolve(ms)
+//       }
+//     }, ms)
+//   })
+// }
+
+// const getDelay = () => {
+//   let rand = 1000 + Math.random() * 2000
+//   return Math.floor(rand)
+// }
+
+// const p1 = doSomething(getDelay())
+// const p2 = doSomething(getDelay())
+// const p3 = doSomething(getDelay())
+// const p4 = doSomething(getDelay())
 
 // -----------------------------------------------------------------------------------------------------------------
 
