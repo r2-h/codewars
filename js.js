@@ -1,3 +1,35 @@
+var maxProfit = function (prices) {
+  if (prices.length === 1) {
+    return 0
+  }
+
+  let maxProfit = 0
+  let min = prices[0]
+
+  for (let i = 1; i < prices.length; i += 1) {
+    console.log({ min })
+    if (prices[i] < min) {
+      min = prices[i]
+    } else {
+      const currentProfit = prices[i] - min
+
+      if (currentProfit > maxProfit) {
+        maxProfit = currentProfit
+      }
+    }
+  }
+
+  return maxProfit
+}
+console.log(maxProfit([7, 1, 5, 3, 6, 4]))
+
+
+function fibonacci(n) {
+  if (n <= 1) return n
+
+  return fibonacci(n - 1) + fibonacci(n - 2)
+}
+
 // // получить самый быстрый промис м среднее время выполнения промисов
 
 // const doSomething = (ms) => {
