@@ -1,4 +1,10 @@
 export const TypeScript = () => {
+  // const promisedNumbers = [Promise.resolve(1), Promise.resolve(2), Promise.resolve(3)];
+
+  // asyncMap(promisedNumbers, (num, index) => num * index).then((result) => {
+  //   console.log(result); // [0, 2, 6]
+  // })
+  //-----------------------------------------------------------------------------------------------------------------------------------
   // const data = [
   //   { id: 1, name: "siberia can code ❄️" },
   //   { id: 2, body: { name: "siberia can code ❄️" } },
@@ -74,7 +80,7 @@ export const TypeScript = () => {
   //   },
   // ]
 
-  // function sumTree() {  
+  // function sumTree() {
   // }
   // console.log(sumTree(tree)) //108
 
