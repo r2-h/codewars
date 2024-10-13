@@ -1,3 +1,13 @@
+// const checkBrackets = (str) => {
+
+// }
+
+// console.log(checkBrackets("([]{})")) // true
+// console.log(checkBrackets("()[]{}")) // true
+// console.log(checkBrackets("({[}])")) // false
+// console.log(checkBrackets("([)]")) // false
+// console.log(checkBrackets("{[}")) // false
+// -----------------------------------------------------------------------------------------------------------------
 /**
 Реализуйте функцию-шпиона spy, которая работает следующим образом:
 
@@ -17,8 +27,6 @@ spyFoo.calledWith('test123'); // out: false
 spyFoo.returned('test'); // out: true
 spyFoo.callCount(); // out: 1
 */
-
-
 
 // var maxProfit = function (prices) {
 //   if (prices.length === 1) {
