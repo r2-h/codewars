@@ -3,7 +3,7 @@
 
 // const array = [[[1, [100, [5]]], 2], [[1]], 2]
 // console.log(array.flat(3))
-// console.log(array.customFlat(array, 3))
+// console.log(array.customFlat(3))
 // -----------------------------------------------------------------------------------------------------------------
 // const checkBrackets = (str) => {
 
