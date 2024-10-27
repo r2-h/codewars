@@ -1,6 +1,5 @@
 // custom flat
 
-
 // const array = [[[1, [100, [5]]], 2], [[1]], 2]
 // console.log(array.flat(3))
 // console.log(array.customFlat(3))
@@ -15,25 +14,23 @@
 // console.log(checkBrackets("([)]")) // false
 // console.log(checkBrackets("{[}")) // false
 // -----------------------------------------------------------------------------------------------------------------
-/**
-Реализуйте функцию-шпиона spy, которая работает следующим образом:
 
-принимает на вход любую функцию, например:
+// Реализуйте функцию-шпиона spy, которая принимает на вход любую функцию и может следить за ее вызовами
 
-function foo(a) {
-   return a;
-}
+// function foo(a) {
+//   return a + "A"
+// }
 
-const spyFoo = spy(foo);
+// const spyFoo = spy(foo)
 
-и может следить за ее вызовами
+// spyFoo("test") // log: test
+// spyFoo.calledWith("test") // out: true
+// spyFoo.calledWith("test123") // out: false
+// spyFoo.returned("testA") // out: true
+// spyFoo.returned("test") // out: false
 
-spyFoo('test'); // log: test 
-spyFoo.calledWith('test'); // out: true
-spyFoo.calledWith('test123'); // out: false
-spyFoo.returned('test'); // out: true
-spyFoo.callCount(); // out: 1
-*/
+// spyFoo('test2')
+// spyFoo.callCount() // out: 2
 
 // -----------------------------------------------------------------------------------------------------------------
 
