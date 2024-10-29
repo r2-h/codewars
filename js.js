@@ -233,11 +233,10 @@ JavaScript. Напиши функцию-конструктор, которая �
 //     return increasing || decreasing;
 //   }
   
-  // Примеры использования:
-  console.log(isMonotonic([1, 2, 3, 6])); // true
-  console.log(isMonotonic([6, 3, 3, 2, 1])); // true
-  console.log(isMonotonic([1, 1, 1])); // true
-  console.log(isMonotonic([1, 10, 6])); // false
+//   console.log(isMonotonic([1, 2, 3, 6])); // true
+//   console.log(isMonotonic([6, 3, 3, 2, 1])); // true
+//   console.log(isMonotonic([1, 1, 1])); // true
+//   console.log(isMonotonic([1, 10, 6])); // false
   
 
 // currying -------------------------------------------------------------------------------
