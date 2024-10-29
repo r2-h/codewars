@@ -192,6 +192,22 @@ JavaScript. Напиши функцию-конструктор, которая �
 // console.log(isEqual(redCar, blueCar)) // false
 // console.log(isEqual(redCar, greenCar)) // true
 
+
+// -------------------------------------------------------------------------------
+// const get = (obj, path) => {}
+
+// const obj = {
+//   a: {
+//     b: {
+//       c: "d",
+//     },
+//     e: "f",
+//   },
+// }
+
+// console.log(get(obj, "a.e")) // 'f'
+// console.log(get(obj, "a.b")) // {c: 'd'}
+
 // currying -------------------------------------------------------------------------------
 // const add = (x) => (y) => x + y
 // const mul = (x) => (y) => x * y
