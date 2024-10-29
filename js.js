@@ -192,7 +192,6 @@ JavaScript. Напиши функцию-конструктор, которая �
 // console.log(isEqual(redCar, blueCar)) // false
 // console.log(isEqual(redCar, greenCar)) // true
 
-
 // -------------------------------------------------------------------------------
 // const get = (obj, path) => {}
 
@@ -207,6 +206,39 @@ JavaScript. Напиши функцию-конструктор, которая �
 
 // console.log(get(obj, "a.e")) // 'f'
 // console.log(get(obj, "a.b")) // {c: 'd'}
+
+//---------------------------------------------------------------------------------------------------------
+
+// async function get(url) {}
+
+// get("https://example.com/data")
+//   .then((res) => console.log(res))
+//   .catch((err) => console.error(err))
+
+
+//---------------------------------------------------------------------------------------------------------
+// function isMonotonic(numbers) {
+//     let increasing = true;
+//     let decreasing = true;
+  
+//     for (let i = 1; i < numbers.length; i++) {
+//       if (numbers[i] > numbers[i - 1]) {
+//         decreasing = false;
+//       }
+//       if (numbers[i] < numbers[i - 1]) {
+//         increasing = false;
+//       }
+//     }
+  
+//     return increasing || decreasing;
+//   }
+  
+  // Примеры использования:
+  console.log(isMonotonic([1, 2, 3, 6])); // true
+  console.log(isMonotonic([6, 3, 3, 2, 1])); // true
+  console.log(isMonotonic([1, 1, 1])); // true
+  console.log(isMonotonic([1, 10, 6])); // false
+  
 
 // currying -------------------------------------------------------------------------------
 // const add = (x) => (y) => x + y
@@ -876,3 +908,27 @@ JavaScript. Напиши функцию-конструктор, которая �
 //         }
 //     }
 // }
+
+//--------------------------------------------------------------------------------------------------------------------------
+// async function get(url) {
+//     for (let i = 0; i <= 5; i++) {
+//       try {
+//         const response = await fetch(url)
+
+//         if (!response.ok) {
+//           throw new Error(`Ошибка: ${response.status}`)
+//         }
+
+//         const data = await response.json()
+//         return data
+//       } catch (error) {
+//         if (i === 5) {
+//           throw new Error("Заданный URL недоступен")
+//         }
+//       }
+//     }
+//   }
+
+//   get("https://example.com/data")
+//     .then((res) => console.log(res))
+//     .catch((err) => console.error(err))
