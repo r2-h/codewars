@@ -1,3 +1,10 @@
+const findAnagrams = (arr) => {
+    
+}
+
+const result = findAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
+console.log(result) // [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+// -----------------------------------------------------------------------------------------------------------------
 // custom flat
 
 // const array = [[[1, [100, [5]]], 2], [[1]], 2]
@@ -215,12 +222,11 @@ JavaScript. Напиши функцию-конструктор, которая �
 //   .then((res) => console.log(res))
 //   .catch((err) => console.error(err))
 
-
 //---------------------------------------------------------------------------------------------------------
 // function isMonotonic(numbers) {
 //     let increasing = true;
 //     let decreasing = true;
-  
+
 //     for (let i = 1; i < numbers.length; i++) {
 //       if (numbers[i] > numbers[i - 1]) {
 //         decreasing = false;
@@ -229,15 +235,14 @@ JavaScript. Напиши функцию-конструктор, которая �
 //         increasing = false;
 //       }
 //     }
-  
+
 //     return increasing || decreasing;
 //   }
-  
+
 //   console.log(isMonotonic([1, 2, 3, 6])); // true
 //   console.log(isMonotonic([6, 3, 3, 2, 1])); // true
 //   console.log(isMonotonic([1, 1, 1])); // true
 //   console.log(isMonotonic([1, 10, 6])); // false
-  
 
 // currying -------------------------------------------------------------------------------
 // const add = (x) => (y) => x + y
