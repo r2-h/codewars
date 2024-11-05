@@ -1,9 +1,4 @@
-type Data = {
-  id: number
-  name: string
-  children?: Data[]
-}
-const data: Data[] = [
+const data = [
   {
     id: 1,
     name: "Node 1",
