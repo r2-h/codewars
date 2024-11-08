@@ -17,7 +17,7 @@ export function UseHistory() {
     </div>
   )
 }
-/* 
+/* добавить хук useStateWithHistory, остальное не трогать
 
 1
 1
