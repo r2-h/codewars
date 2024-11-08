@@ -1,9 +1,9 @@
-const findAnagrams = (arr) => {
+// const findAnagrams = (arr) => {
     
-}
+// }
 
-const result = findAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
-console.log(result) // [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+// const result = findAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"])
+// console.log(result) // [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
 // -----------------------------------------------------------------------------------------------------------------
 // custom flat
 
