@@ -501,19 +501,6 @@ JavaScript. Напиши функцию-конструктор, которая �
 //   .finally(p => p + 'e')
 //   .then(p => console.log(p))
 
-// (function () {
-//   console.log(1)
-//   setTimeout(() => console.log(2), 1000)
-//   setTimeout(() => console.log(3), 0)
-//   Promise.resolve(5).then(console.log)
-//   new Promise((res) => {
-//     console.log(6)
-//     res(7)
-//   })
-//     .then(console.log)
-//   console.log(4)
-// })()
-
 // const p1 = new Promise((resolve, reject) => {
 //   throw new Error('Uh-oh!');
 // });
