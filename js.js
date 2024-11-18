@@ -385,15 +385,6 @@ JavaScript. Напиши функцию-конструктор, которая �
 
 // CLASSES  __________________________________________________________________________________________________________
 
-// class Cat {
-//   name = 'Murka'
-//   constructor(name) {
-//   }
-// }
-// const yasha = new Cat('Yasha')
-// console.log(yasha) //
-// console.log(yasha instanceof Cat)  //
-
 // class Logger {
 //   log(text) {
 //     console.log(text)
