@@ -1,3 +1,17 @@
+// const START = Date.now()
+
+// function someFn() {
+//   console.log("time", Date.now() - START)
+//   console.log("args", [...arguments])
+// }
+
+// const f = someFn.delay(500)
+
+// f("11", "22", 1, 2)
+// // time 7
+// // args [ '11', '22', 1, 2 ]
+
+// -----------------------------------------------------------------------------------------------------------------
 // const findAnagrams = (arr) => {
 
 // }
