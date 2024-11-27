@@ -1,5 +1,5 @@
 import s from "../App.module.css"
 
-const Carousel = () => {
+export const Carousel = () => {
   return <div></div>
 }
